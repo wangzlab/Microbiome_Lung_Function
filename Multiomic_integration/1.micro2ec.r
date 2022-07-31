@@ -1,13 +1,13 @@
 # input: 
-# "asv.txt"
-# "mapping"
-# "micro"
-# "pred_metagenome_strat.tsv"
-# "meta.txt"
+# "asv.txt" - otu/asv to species mapping file
+# "mapping.txt" - species ID to taxonomy mapping file
+# "micro.txt" - species list of interest
+# "pred_metagenome_strat.tsv" - otu/asv to EC contribution file from PICRUSt2
+# "meta.txt" - sample metadata file
 
 # output:
-# "ec.txt"
-# "contrib.txt"
+# "ec.txt" - micro-contributed EC list
+# "contrib.txt" - micro-EC contribution profile
 
 
 library(data.table)
@@ -19,11 +19,11 @@ library(dplyr)
 ASV.spec_df <- fread("asv.txt", data.table = F, sep = "\t", header = F, col.names = c("ASV","species"))
 ASV.spec_df$species <- gsub("; ",";",ASV.spec_df$species)
 
-# OTU - species connection ------------------
-OTU.spec_df <- fread("mapping", data.table = F, sep = '\t', header = F, col.names = c("OTU","species"))
+# Species ID - taxonomy connection ------------------
+OTU.spec_df <- fread("mapping.txt", data.table = F, sep = '\t', header = F, col.names = c("OTU","species"))
 
-# OTU list -----------------------
-otus <- fread("micro", data.table = F,header = F, col.names="OTU")
+# Species list -----------------------
+otus <- fread("micro.txt", data.table = F,header = F, col.names="OTU")
 # otus <- as.data.frame( c("OTU18",  "OTU143", "OTU369")); colnames(otus)<-"OTU" # debug
 
 
