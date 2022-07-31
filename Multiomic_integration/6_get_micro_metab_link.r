@@ -1,6 +1,6 @@
 # input:
 # "contrib.txt" - micro-EC contribution from previous step
-# "currency_cmpd" - 'currency' compound list to be removed from analysis
+# "currency_cmpd.txt" - 'currency' compound list to be removed from analysis
 # "ec2metabo.txt" - ec to metabolites from previous step
 # "micro_metab.txt" - microbiome and metabolome correlation results from HAllA
 
