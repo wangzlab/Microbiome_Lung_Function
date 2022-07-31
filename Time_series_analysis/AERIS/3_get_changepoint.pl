@@ -1,4 +1,4 @@
-# Step 3: Parse changepoint results into a new directory #
+# Step 3: Parse raw changepoint results into a new directory #
 
 open (IN, "samplelist"); ## aeris_sample_list
 while (<IN>) {
