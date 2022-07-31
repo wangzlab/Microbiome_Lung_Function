@@ -2,7 +2,7 @@
 
 use List::Util qw/shuffle/;
 
-open (IN, "all_changepoints.txt");
+open (IN, "all_changepoints.txt"); ## the concatenated changepoints for all individuals
 while (<IN>) {
 	chop;
 	@a=split("\t",$_);
