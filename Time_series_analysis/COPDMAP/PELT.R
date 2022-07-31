@@ -1,0 +1,5 @@
+args=commandArgs(trailingOnly=TRUE)
+library("changepoint")
+data<-read.table(file=args[1], sep="\t", header=T)
+meanvar<-cpt.meanvar(data$FEV1,method="PELT")
+capture.output(meanvar,file=args[2])
