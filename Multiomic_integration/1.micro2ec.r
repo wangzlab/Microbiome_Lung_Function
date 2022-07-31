@@ -1,7 +1,7 @@
 # input: 
 # "asv.txt" - otu/asv to species mapping file
 # "mapping.txt" - species ID to taxonomy mapping file
-# "micro.txt" - species list of interest
+# "micro.txt" - species list of interest (replace it with micro_RD.txt, micro_SD.txt, micro_ND.txt)
 # "pred_metagenome_strat.tsv" - otu/asv to EC contribution file from PICRUSt2
 # "meta.txt" - sample metadata file
 
